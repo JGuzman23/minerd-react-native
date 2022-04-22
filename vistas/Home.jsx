@@ -17,6 +17,11 @@ const Home = () => {
         SetModal(false)
         navigation.navigate("pagos")
     }
+
+    const Imprimir =()=>{
+        alert("Imprimir")
+    }
+
     return (
         <View style={styles.container}>
 
@@ -24,7 +29,7 @@ const Home = () => {
             <View style={styles.containers}>
                 <Text style={styles.title}>Buscar Documentos</Text>
 
-                <Text style={styles.subTitle} >RNE</Text>
+              
                 <TextInput
                     style={styles.input}
                     onChangeText={onChangeRne}
@@ -50,7 +55,7 @@ const Home = () => {
                     </TouchableOpacity>
 
                     <View>
-                        <Text style={styles.opciones}  > Imprimir</Text>
+                        <Text  onPress={()=>Imprimir()} style={styles.opciones}  > Imprimir</Text>
                         <Text style={styles.opciones} > Descargar</Text>
                         <Text style={styles.opciones} > Legalzar</Text>
                     </View>
@@ -273,7 +278,7 @@ const styles = StyleSheet.create({
     },
     encabezado: {
 
-        marginTop: 40,
+        marginTop: 20,
         flexDirection: "row",
         alignContent: 'space-between',
 
